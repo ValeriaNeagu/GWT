@@ -62,12 +62,12 @@ public class Newproject implements EntryPoint {
 
         // Deschide pagina de editare cu datele utilizatorului
         EditEmployeePage editPage = new EditEmployeePage(firstName, lastName, hireDate, birthDate, this);
-        mainVerticalPanel.clear(); // Șterge doar conținutul din mainVerticalPanel
+        mainVerticalPanel.clear(); 
         mainVerticalPanel.add(editPage);
     }
 
     public void showOriginalContent() {
-        mainVerticalPanel.clear(); // Șterge doar conținutul din mainVerticalPanel
-        onModuleLoad(); // Afișează conținutul original
+        mainVerticalPanel.clear(); 
+        onModuleLoad(); 
     }
 }
