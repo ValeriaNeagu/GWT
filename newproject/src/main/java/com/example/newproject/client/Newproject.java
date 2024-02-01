@@ -55,7 +55,6 @@ public class Newproject implements EntryPoint {
     }
 
     private void openEditPage(int rowIndex) {
-        // Obține datele utilizatorului și deschide pagina de editare
         String firstName = flexTable.getText(rowIndex + 1, 1);
         String lastName = flexTable.getText(rowIndex + 1, 2);
         String hireDate = flexTable.getText(rowIndex + 1, 3);
