@@ -1,0 +1,2 @@
+# Module newproject
+# RPC service class, partial path of RPC policy file
