@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.ditech.gwtproject.client.services.employeeLevel.EmployeeLevelService;
 import com.ditech.gwtproject.client.services.employeeLevel.EmployeeLevelServiceAsync;
+import com.ditech.gwtproject.shared.EmployeeLevel;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -35,7 +36,7 @@ public class TestGWT implements EntryPoint {
 	/**
 	 * Create a remote service proxy to talk to the server-side Greeting service.
 	 */
-//	private final GreetingServiceAsync greetingService = GWT.create(GreetingService.class);
+	private final GreetingServiceAsync greetingService = GWT.create(GreetingService.class);
 
 	private final EmployeeLevelServiceAsync employeeLevelService = GWT.create(EmployeeLevelService.class);
 
@@ -45,7 +46,7 @@ public class TestGWT implements EntryPoint {
 
 	public static final int STATUS_CODE_OK = 200;
 
-	private List<Object> allEmployees = new ArrayList<>();
+	private ArrayList<EmployeeLevel> allEmployees = new ArrayList<>();
 
 //	public void doGet(String url) {
 //		RequestBuilder builder = new RequestBuilder(RequestBuilder.GET, url);
@@ -61,17 +62,15 @@ public class TestGWT implements EntryPoint {
 //		}
 //	}
 
-	private void setAllEmployee(List<Object> allEmployees) {
+	private void setAllEmployee(ArrayList<EmployeeLevel> allEmployees) {
 		this.allEmployees = allEmployees;
 	}
 
-	private List<Object> getAllEmployee() {
+	private List<EmployeeLevel> getAllEmployee() {
 		return this.allEmployees;
 	}
 
 	public void onModuleLoad() {
-//		GWT.debugger();
-//		doGet("cevaaaa");
 		GWT.log(" ---------- TestGWT public void onModuleLoad ");
 
 //		EmployeeLevelService employeeLevelService = new EmployeeLevelService();
@@ -148,33 +147,29 @@ public class TestGWT implements EntryPoint {
 			 */
 			private void sendNameToServer() {
 
-//				greetingService.greetServer("not null", new AsyncCallback<String>() {
-//					@Override
-//					public void onFailure(Throwable caught) {
-//					}
-//					@Override
-//					public void onSuccess(String result) {
-//					}
-//				});
-
-//				greetingService.greetServer("cevaaaa", new AsyncCallback<String>() {
-//					public void onFailure(Throwable caught) {
-//					}
-//
-//					public void onSuccess(String result) {
-//					}
-//				});
-
-				urlDummy = "http://localhost:8099/employeeLevel/findAll";
-				employeeLevelService.findAll(urlDummy, new AsyncCallback<List<Object>>() {
-					@Override
+				greetingService.greetServer("cevaaaa", new AsyncCallback<String>() {
 					public void onFailure(Throwable caught) {
+						GWT.log("greetingService.greetServer onFailure ------------>>> " + caught.getMessage());
 					}
 
-					@Override
-					public void onSuccess(List<Object> result) {
+					public void onSuccess(String result) {
+						GWT.log("greetingService.greetServer onSuccess ------------>>> " + result);
+					}
+
+				});
+
+				urlDummy = "http://localhost:8099/employeeLevel/findAll";
+				employeeLevelService.findAll(urlDummy, new AsyncCallback<ArrayList<EmployeeLevel>>() {
+					public void onFailure(Throwable caught) {
+						GWT.log("	employeeLevelService.findAll onFailure ------------>>> " + caught.getMessage());
+					}
+
+					public void onSuccess(ArrayList<EmployeeLevel> result) {
+						GWT.log("	employeeLevelService.findAll onSuccess ------------>>> ");
 //						allEmployees = result;
-//						setAllEmployee(result);
+						setAllEmployee(result);
+						GWT.log("------------>>> 	public void onSuccess(ArrayList<EmployeeLevel> resul "
+								+ result.toString());
 					}
 				});
 

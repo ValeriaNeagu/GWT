@@ -7,8 +7,7 @@
 	<!-- Servlets -->
 
 
-	<!-- asd -->
-
+	<!-- -->
 	<servlet>
 		<servlet-name>employeeLevelServlet</servlet-name>
 		<servlet-class>com.ditech.gwtproject.server.EmployeeLevelServiceImpl</servlet-class>
@@ -18,6 +17,8 @@
 		<servlet-name>employeeLevelServlet</servlet-name>
 		<url-pattern>/testgwt/employeeLevel</url-pattern>
 	</servlet-mapping>
+
+
 
 
 

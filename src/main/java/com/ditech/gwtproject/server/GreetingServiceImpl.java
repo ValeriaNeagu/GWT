@@ -168,7 +168,6 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements Greetin
 
 	}
 
-//	@Override
 	public String greetServer(String input) throws IllegalArgumentException {
 		// Verify that the input is valid.
 		if (!FieldVerifier.isValidName(input)) {
@@ -178,8 +177,7 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements Greetin
 		}
 
 //		this.doGetRequestTest();
-		
-		
+
 //		this.doPOSTRequestTest();
 
 //		String serverInfo = getServletContext().getServerInfo();
@@ -193,26 +191,18 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements Greetin
 		return "DV";
 	}
 
-	
 	/*
-	public List<Object> greetServerRazvan() throws IllegalArgumentException {
-		CloseableHttpClient httpClient = HttpClients.createDefault();
-		HttpGet request = new HttpGet("http://127.0.0.1:8089/employee-service/qualifying/findall");
-		try {
-			CloseableHttpResponse response = httpClient.execute(request);
-			ArrayList<Object> qualifyingList = new ObjectMapper().readValue(EntityUtils.toString(response.getEntity()),
-					new TypeReference<ArrayList<Object>>() {
-					});
-			return qualifyingList;
-		} catch (ClientProtocolException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return new ArrayList<>();
-	}
-	
-	*/
+	 * public List<Object> greetServerRazvan() throws IllegalArgumentException {
+	 * CloseableHttpClient httpClient = HttpClients.createDefault(); HttpGet request
+	 * = new HttpGet("http://127.0.0.1:8089/employee-service/qualifying/findall");
+	 * try { CloseableHttpResponse response = httpClient.execute(request);
+	 * ArrayList<Object> qualifyingList = new
+	 * ObjectMapper().readValue(EntityUtils.toString(response.getEntity()), new
+	 * TypeReference<ArrayList<Object>>() { }); return qualifyingList; } catch
+	 * (ClientProtocolException e) { e.printStackTrace(); } catch (IOException e) {
+	 * e.printStackTrace(); } return new ArrayList<>(); }
+	 * 
+	 */
 
 	/**
 	 * Escape an html string. Escaping data received from the client helps to

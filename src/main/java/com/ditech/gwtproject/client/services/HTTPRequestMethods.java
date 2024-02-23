@@ -1,14 +1,5 @@
 package com.ditech.gwtproject.client.services;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.List;
-
-import com.google.gson.Gson;
 import com.google.gwt.http.client.Request;
 import com.google.gwt.http.client.RequestBuilder;
 import com.google.gwt.http.client.RequestCallback;
@@ -19,6 +10,7 @@ final public class HTTPRequestMethods {
 	public static final int STATUS_CODE_OK = 200;
 
 	public static Object doHTTPGet(String url) {
+		/*
 		Object objTemp = null;
 		try {
 			Gson gson = new Gson();
@@ -40,7 +32,9 @@ final public class HTTPRequestMethods {
 				in.close();
 				// print result
 				System.out.println(response.toString());
+				
 				Object objDummy = gson.fromJson(response.toString(), Object.class);
+				
 				objTemp = objDummy;
 //				List<Object> myDummyList = gson.fromJson(response.toString(), List.class);
 				System.out.println(objDummy.toString());
@@ -53,7 +47,12 @@ final public class HTTPRequestMethods {
 			e.printStackTrace();
 		}
 		return objTemp;
+		*/
+		
+		return null;
 	}
+	
+	
 
 	public static final Request doHTTPGet_1(String url) {
 
@@ -82,6 +81,7 @@ final public class HTTPRequestMethods {
 	}
 
 	public static void doGet2(String url) {
+		
 		RequestBuilder builder = new RequestBuilder(RequestBuilder.GET, url);
 
 		try {
@@ -97,6 +97,7 @@ final public class HTTPRequestMethods {
 		} catch (RequestException e) {
 			// Code omitted for clarity
 		}
+		
 	}
 
 //	default void doHTTPPost(String url, String postData) {
