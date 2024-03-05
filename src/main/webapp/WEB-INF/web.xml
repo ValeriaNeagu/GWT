@@ -6,36 +6,40 @@
 
 	<!-- Servlets -->
 
+	<servlet>
+		<servlet-name>qualifyingServlet</servlet-name>
+		<servlet-class>com.ditech.gwtV1.server.QualifyingServiceImpl</servlet-class>
+	</servlet>
 
-	<!-- -->
+	<servlet-mapping>
+		<servlet-name>qualifyingServlet</servlet-name>
+		<url-pattern>/gwtv1/qualifying</url-pattern>
+	</servlet-mapping>
+
 	<servlet>
 		<servlet-name>employeeLevelServlet</servlet-name>
-		<servlet-class>com.ditech.gwtproject.server.EmployeeLevelServiceImpl</servlet-class>
+		<servlet-class>com.ditech.gwtV1.server.EmployeeLevelServiceImpl</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>employeeLevelServlet</servlet-name>
-		<url-pattern>/testgwt/employeeLevel</url-pattern>
+		<url-pattern>/gwtv1/employeeLevel</url-pattern>
 	</servlet-mapping>
 
 
-
-
-
-
 	<servlet>
 		<servlet-name>greetServlet</servlet-name>
-		<servlet-class>com.ditech.gwtproject.server.GreetingServiceImpl</servlet-class>
+		<servlet-class>com.ditech.gwtV1.server.GreetingServiceImpl</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>greetServlet</servlet-name>
-		<url-pattern>/testgwt/greet</url-pattern>
+		<url-pattern>/gwtv1/greet</url-pattern>
 	</servlet-mapping>
 
 	<!-- Default page to serve -->
 	<welcome-file-list>
-		<welcome-file>TestGWT.html</welcome-file>
+		<welcome-file>GwtV1.html</welcome-file>
 	</welcome-file-list>
 
 </web-app>

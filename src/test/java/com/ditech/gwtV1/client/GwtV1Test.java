@@ -1,6 +1,6 @@
-package com.ditech.gwtproject.client;
+package com.ditech.gwtV1.client;
 
-import com.ditech.gwtproject.shared.FieldVerifier;
+import com.ditech.gwtV1.shared.FieldVerifier;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.junit.client.GWTTestCase;
 import com.google.gwt.user.client.rpc.AsyncCallback;
@@ -9,13 +9,13 @@ import com.google.gwt.user.client.rpc.ServiceDefTarget;
 /**
  * GWT JUnit tests must extend GWTTestCase.
  */
-public class TestGWTTest extends GWTTestCase {
+public class GwtV1Test extends GWTTestCase {
 
 	/**
 	 * Must refer to a valid module that sources this class.
 	 */
 	public String getModuleName() {
-		return "com.ditech.gwtproject.TestGWTJUnit";
+		return "com.ditech.gwtV1.GwtV1JUnit";
 	}
 
 	/**
@@ -38,7 +38,7 @@ public class TestGWTTest extends GWTTestCase {
 		// Create the service that we will test.
 		GreetingServiceAsync greetingService = GWT.create(GreetingService.class);
 		ServiceDefTarget target = (ServiceDefTarget) greetingService;
-		target.setServiceEntryPoint(GWT.getModuleBaseURL() + "testgwt/greet");
+		target.setServiceEntryPoint(GWT.getModuleBaseURL() + "gwtv1/greet");
 
 		// Since RPC calls are asynchronous, we will need to wait for a response
 		// after this test method returns. This line tells the test runner to wait

@@ -3,13 +3,13 @@
   When updating your version of GWT, you should also update this DTD reference,
   so that your app can take advantage of the latest GWT module capabilities.
 -->
-<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.11.0//EN"
-  "http://gwtproject.org/doctype/2.11.0/gwt-module.dtd">
-<module rename-to='testgwt'>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.10.0//EN"
+  "http://gwtproject.org/doctype/2.10.0/gwt-module.dtd">
+<module rename-to='gwtv1'>
   <!-- Inherit our applications main module.                      -->
-  <inherits name='com.ditech.gwtproject.TestGWT'/>
+  <inherits name='com.ditech.gwtV1.GwtV1'/>
 
   <!-- Specify the path to any remote services.                   -->
-  <servlet path="/testgwt/greet" class="com.ditech.gwtproject.server.GreetingServiceImpl" />
+  <servlet path="/gwtv1/greet" class="com.ditech.gwtV1.server.GreetingServiceImpl" />
 
 </module>

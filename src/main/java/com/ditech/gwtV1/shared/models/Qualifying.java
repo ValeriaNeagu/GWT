@@ -1,13 +1,24 @@
-package com.ditech.gwtproject.shared;
+package com.ditech.gwtV1.shared.models;
 
 import com.google.gwt.user.client.rpc.IsSerializable;
 
-public class EmployeeLevel implements IsSerializable {
+public class Qualifying implements IsSerializable, Cloneable {
+
 	private Long id;
 	private Integer version;
 	private String description;
 
-	public EmployeeLevel() {
+	public Qualifying() {
+	}
+
+	public Qualifying(String description) {
+		this.description = description;
+	}
+
+	public Qualifying(Qualifying qualifying) {
+		this.id = qualifying.getId();
+		this.version = qualifying.getVersion();
+		this.description = qualifying.getDescription();
 	}
 
 	public Long getId() {

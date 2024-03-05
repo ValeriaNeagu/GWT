@@ -1,12 +1,12 @@
-package com.ditech.gwtproject.client.services.employeeLevel;
+package com.ditech.gwtV1.client.services.employeeLevel;
 
 import java.util.ArrayList;
 
-import com.ditech.gwtproject.shared.EmployeeLevel;
+import com.ditech.gwtV1.shared.models.EmployeeLevel;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
 @RemoteServiceRelativePath("employeeLevel")
 public interface EmployeeLevelService extends RemoteService {
-	ArrayList<EmployeeLevel> findAll(String name) throws IllegalArgumentException;
+	ArrayList<EmployeeLevel> findAll() throws IllegalArgumentException;
 }

@@ -1,4 +1,4 @@
-package com.ditech.gwtproject.shared;
+package com.ditech.gwtV1.shared;
 
 /**
  * <p>
